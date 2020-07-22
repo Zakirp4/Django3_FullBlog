@@ -85,9 +85,10 @@ def post_detail(request, post_id):
 
 def post_add(request):
     category_list = Category.objects.all()
-    forms = PostAddForm(request.POST or None)
+    forms = PostAddForm()
 
     if request.method == 'POST':
+        forms = PostAddForm(request.POST, request.FILES)
         if forms.is_valid():
             forms.save();
             return redirect('post-list')
