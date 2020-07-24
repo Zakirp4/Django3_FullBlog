@@ -1,41 +1,59 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+            <i class="fas fa-laugh-wink"></i>
         </div>
         <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
-      </a>
+    </a>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
         <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">
+            <i class="nav-icon fa fa-th text-green"></i>
+            <span>Posts</span></a>
+    </li>
     <li class="nav-item active">
         <a class="nav-link" href="{% url 'post-add' %}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Create Post</span></a>
-      </li>
+            <i class="nav-icon fas fa-copy"></i>
+            <span>Create Post</span></a>
+    </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="{% url 'authors' %}">
+            <i class="nav-icon fas fa-edit"></i>
+            <span>Author</span></a>
+    </li>
 
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'author-add' %}">
+            <i class="nav-icon fas fa-copy"></i>
+            <span>Create Author</span></a>
+    </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'category-add' %}">
+            <i class="nav-icon fas fa-copy"></i>
+            <span>Create Category</span></a>
+    </li>
 
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
 
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+    </div>
 
-    </ul>
+</ul>
